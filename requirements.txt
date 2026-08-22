@@ -1,0 +1,13 @@
+tensorflow
+keras
+streamlit
+numpy
+pillow
+scikit-learn
+matplotlib
+pandas
+split-folders
+requests
+openpyxl
+fpdf2
+pytest
