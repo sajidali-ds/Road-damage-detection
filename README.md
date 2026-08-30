@@ -2,6 +2,8 @@
 
 A Streamlit web app that classifies road-related civic issues from an uploaded photo using an **EfficientNet** image classifier, tags the issue with its **GPS location**, and lets you report it to the concerned authority — via **email**, or as a downloadable **PDF/Excel report**. All submitted reports are logged and viewable in a history tab.
 
+🔗 **Live demo:** [road-damage-detection-awoppka8lxxw4hxp9nx8zd.streamlit.app](https://road-damage-detection-awoppka8lxxw4hxp9nx8zd.streamlit.app/)
+
 ---
 
 ## ✨ Features
@@ -154,3 +156,5 @@ pytest
 ## 🤝 Contributing
 
 Issues and pull requests are welcome. Please open an issue first to discuss significant changes.
+
+
