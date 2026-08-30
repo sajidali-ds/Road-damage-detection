@@ -4,7 +4,7 @@ import json
 from PIL import Image
 from tensorflow.keras.models import load_model
 
-from config import MODEL_PATH, CLASS_NAMES
+from config import MODEL_PATH
 from preprocessing.preprocess import preprocess_image
 
 model = load_model(MODEL_PATH)
