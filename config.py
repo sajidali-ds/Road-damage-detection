@@ -23,7 +23,7 @@ BATCH_SIZE = 32
 EPOCHS = 20
 FINE_TUNE_EPOCHS = 10
 
-EMAIL_ENABLED = True
+EMAIL_ENABLED = os.getenv("EMAIL_ENABLED", "false").lower() == "true"
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
 AUTHORITY_EMAIL = os.getenv("AUTHORITY_EMAIL")
@@ -31,4 +31,4 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 
-GOOGLE_MAPS_API_KEY = ""
+
