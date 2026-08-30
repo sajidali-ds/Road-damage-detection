@@ -1,4 +1,6 @@
 import numpy as np
+import os
+import json
 from PIL import Image
 from tensorflow.keras.models import load_model
 
@@ -6,6 +8,15 @@ from config import MODEL_PATH, CLASS_NAMES
 from preprocessing.preprocess import preprocess_image
 
 model = load_model(MODEL_PATH)
+
+
+CLASS_NAMES_PATH = os.path.join(
+    os.path.dirname(MODEL_PATH),
+    "class_names.json"
+)
+
+with open(CLASS_NAMES_PATH, "r") as f:
+    CLASS_NAMES = json.load(f)
 
 
 def predict_image(image: Image.Image) -> dict:
