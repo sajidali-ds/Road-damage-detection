@@ -96,7 +96,10 @@ with tab_report:
                 image_path=saved_image_path, emailed=success,
             )
 
-            st.success(message) if success else st.warning(message)
+            if success:
+                st.success(message)
+            else:
+                st.warning(message)
 
         if generate_docs_now:
             saved_image_path = save_uploaded_image(image)
