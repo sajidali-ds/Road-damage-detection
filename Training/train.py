@@ -1,5 +1,6 @@
 import sys
 import os
+import json
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -58,6 +59,12 @@ def get_callbacks():
 
 def main():
     train_ds, val_ds, class_names = build_datasets()
+    os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
+
+    with open(os.path.join(os.path.dirname(MODEL_PATH), "class_names.json"), "w") as f:
+        json.dump(class_names, f)
+
+    print("Class order saved:", class_names)
     class_weights = get_class_weights(train_ds)
     print("Class weights:", class_weights)
 

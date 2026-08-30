@@ -1,4 +1,5 @@
 import os
+import json
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -14,19 +15,10 @@ UPLOADS_DIR = os.path.join(BASE_DIR, "reports", "uploaded_images")
 IMG_SIZE = (224, 224)
 
 
-CLASS_NAMES = [
-    "Broken Road Sign Issues",
-    "Damaged Road issues",
-    "Illegal Parking Issues",
-    "Littering Garbage on Public Places Issues",
-    "Mixed Issues",
-    "Pothole Issues",
-    "Vandalism Issues",
-]
 
-TRAIN_DIR = "/content/drive/MyDrive/Road_damage_cnn_project/CNN_Road_Data/split_data/train"
-VAL_DIR = "/content/drive/MyDrive/Road_damage_cnn_project/CNN_Road_Data/split_data/val"
-TEST_DIR = "/content/drive/MyDrive/Road_damage_cnn_project/CNN_Road_Data/split_data/test"
+TRAIN_DIR = os.path.join(BASE_DIR, "data", "train")
+VAL_DIR = os.path.join(BASE_DIR, "data", "val")
+TEST_DIR = os.path.join(BASE_DIR, "data", "test")
 BATCH_SIZE = 32
 EPOCHS = 20
 FINE_TUNE_EPOCHS = 10
