@@ -1,5 +1,7 @@
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 MODEL_PATH = os.path.join(BASE_DIR, "models", "best_model.keras")
@@ -30,9 +32,9 @@ EPOCHS = 20
 FINE_TUNE_EPOCHS = 10
 
 EMAIL_ENABLED = True
-SENDER_EMAIL = "sajidmd07032@gmail.com"
-SENDER_PASSWORD = "uurmxlxfbmwckqcx"
-AUTHORITY_EMAIL = "mekhan986263@gmail.com"
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
+AUTHORITY_EMAIL = os.getenv("AUTHORITY_EMAIL")
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 

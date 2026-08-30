@@ -11,3 +11,4 @@ requests
 openpyxl
 fpdf2
 pytest
+python-dotenv
